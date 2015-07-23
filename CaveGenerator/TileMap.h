@@ -12,6 +12,7 @@ public:
 	sf::Vector2i getTileSize() { return mTileSize; }
 	void setTile(char t, int x, int y) { mMap[y*mSize.x + x] = t; }
 	char getTile(int x, int y) const { return mMap[y*mSize.x + x]; }
+	void setMap(char* map) { delete mMap; mMap = map; }
 	void clear();
 protected:
 	sf::Vector2i mSize;
