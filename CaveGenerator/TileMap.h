@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 
+// A Tile is just a Sprite
 typedef sf::Sprite Tile;
 
 class TileMap : public sf::Drawable {
@@ -13,7 +14,7 @@ public:
 	void setTile(char t, int x, int y) { mMap[y*mSize.x + x] = t; }
 	char getTile(int x, int y) const { return mMap[y*mSize.x + x]; }
 	void setMap(char* map) { delete mMap; mMap = map; }
-	void clear();
+	void clear() { memset(mMap, 0, mSize.x * mSize.y * sizeof(char)); }
 protected:
 	sf::Vector2i mSize;
 	sf::Vector2i mTileSize;

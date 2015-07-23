@@ -21,7 +21,6 @@ int main() {
 		Tile(texture, sf::IntRect(tileSize.x, 0, tileSize.x, tileSize.y)),
 		Tile(texture, sf::IntRect(0, 0, tileSize.x, tileSize.y))
 	};
-
 	sf::Font font;
 	if (!font.loadFromFile("LCD_Solid.TTF")) {
 		std::cout << "Unable to load the font" << std::endl;

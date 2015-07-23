@@ -16,12 +16,6 @@ TileMap::TileMap(sf::Vector2i& size, sf::Vector2i& tileSize, Tile* tileset) {
 	clear();
 }
 
-void TileMap::clear() {
-	int n = mSize.x*mSize.y;
-	for (int i = 0; i < n; i++)
-		mMap[i] = 1;
-}
-
 void TileMap::draw(sf::RenderTarget& target, sf::RenderStates states) const {
 	Tile* tile;
 	for (int y = 0; y < mSize.y; y++)
